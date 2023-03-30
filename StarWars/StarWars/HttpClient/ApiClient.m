@@ -29,13 +29,20 @@
         // Create dataTask
         NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
-            NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-
-            dispatch_async(dispatch_get_main_queue(), ^{
-                BasePaginationModel *clientObj = [[BasePaginationModel alloc] init];
-                [clientObj setupWithJsonDictionary:results];
-                [self.delegate getPagination:clientObj withError: error];
-            });
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSDictionary *results;
+                    BasePaginationModel *clientObj;
+                    if (!error) {
+                        results = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+                        clientObj = [[BasePaginationModel alloc] init];
+                        [clientObj setupWithJsonDictionary:results];
+                    }
+    
+                   
+                    [self.delegate getPagination:clientObj withError: error];
+                });
+            
+            
         }];
 
         // Fire the request

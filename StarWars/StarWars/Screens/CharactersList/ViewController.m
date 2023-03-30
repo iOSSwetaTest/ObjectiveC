@@ -20,16 +20,23 @@
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CustomCell" bundle:nil] forCellReuseIdentifier:@"CustomCell"];
-    apiClient = [[ApiClient alloc] init];
+    
     characterList = [[NSMutableArray alloc] init];
+    apiClient = [[ApiClient alloc] init];
+    
     apiClient.delegate = self;
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
-    if (characterList.count == 0) {
-        [loader startAnimating];
-        [apiClient loadDatafrom:[self returnUrl]];
-    }
+    [self reloadTable];
+}
+
+#pragma mark - Call HTTP class to get characterlist
+
+- (IBAction)reloadTable {
+    [loader startAnimating];
+    [apiClient loadDatafrom:[self returnUrl]];
 }
 
 -(NSURL *)returnUrl {
@@ -37,19 +44,33 @@
         return [NSURL URLWithString:@"https://swapi.dev/api/people/?page=1"];
     } else {
         return nextPageUrl;
-
+        
     }
 }
+
+#pragma mark - Delegate method for API Client
 
 - (void)getPagination:(BasePaginationModel*)result withError:(NSError *)error {
+    [loader stopAnimating];
+    
     if (!error) {
-        [loader stopAnimating];
-        NSLog(@"Get pagination==>%@", result);
-        characterList = result.results;
+        [characterList addObjectsFromArray: result.results];
+        nextPageUrl = result.next;
         [self.tableView reloadData];
+    } else {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                       message:@"Please try later"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
-   
+    
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

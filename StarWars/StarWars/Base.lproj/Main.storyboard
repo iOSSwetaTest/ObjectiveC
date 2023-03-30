@@ -19,8 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-Zv-mFZ">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dn4-1u-XGw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4gT-9H-SDo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Refresh"/>
+                                <connections>
+                                    <action selector="reloadTable" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0d-SI-9sP"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-Zv-mFZ">
+                                <rect key="frame" x="0.0" y="195" width="393" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="3we-lZ-nbz"/>
@@ -37,11 +49,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dn4-1u-XGw" secondAttribute="trailing" id="4VG-2w-1bK"/>
                             <constraint firstItem="k7n-QV-PRY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B5Y-bS-8ik"/>
-                            <constraint firstItem="Eod-Zv-mFZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="D7P-62-VQn"/>
-                            <constraint firstItem="Eod-Zv-mFZ" firstAttribute="top" secondItem="Rxh-vY-cxk" secondAttribute="bottom" id="G8o-8Y-4GN"/>
-                            <constraint firstAttribute="trailing" secondItem="Eod-Zv-mFZ" secondAttribute="trailing" id="Sne-FL-dF3"/>
-                            <constraint firstItem="oQc-Db-Bq5" firstAttribute="top" secondItem="Eod-Zv-mFZ" secondAttribute="bottom" id="qtr-tV-XUq"/>
+                            <constraint firstItem="dn4-1u-XGw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G3U-vQ-5cR"/>
+                            <constraint firstItem="dn4-1u-XGw" firstAttribute="top" secondItem="Rxh-vY-cxk" secondAttribute="bottom" id="Wox-Qr-ad1"/>
                             <constraint firstItem="k7n-QV-PRY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r1P-ll-fb5"/>
                         </constraints>
                     </view>
@@ -53,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-2"/>
+            <point key="canvasLocation" x="25.190839694656489" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
