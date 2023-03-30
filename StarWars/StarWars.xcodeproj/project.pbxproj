@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B3C185B29D4DD3D00C5E55C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C185A29D4DD3D00C5E55C /* AppDelegate.m */; };
-		4B3C185E29D4DD3D00C5E55C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C185D29D4DD3D00C5E55C /* SceneDelegate.m */; };
 		4B3C186129D4DD3D00C5E55C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C186029D4DD3D00C5E55C /* ViewController.m */; };
 		4B3C186429D4DD3D00C5E55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C186229D4DD3D00C5E55C /* Main.storyboard */; };
 		4B3C186629D4DD3D00C5E55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C186529D4DD3D00C5E55C /* Assets.xcassets */; };
@@ -17,6 +16,10 @@
 		4B3C187629D4DD3E00C5E55C /* StarWarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C187529D4DD3E00C5E55C /* StarWarsTests.m */; };
 		4B3C188029D4DD3E00C5E55C /* StarWarsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C187F29D4DD3E00C5E55C /* StarWarsUITests.m */; };
 		4B3C188229D4DD3E00C5E55C /* StarWarsUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C188129D4DD3E00C5E55C /* StarWarsUITestsLaunchTests.m */; };
+		4B3C189329D508C400C5E55C /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C189229D508C400C5E55C /* CustomCell.m */; };
+		4B3C189529D5094A00C5E55C /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3C189429D5094A00C5E55C /* CustomCell.xib */; };
+		4B3C189929D518EF00C5E55C /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C189829D518EF00C5E55C /* ApiClient.m */; };
+		4B3C189D29D5ECF200C5E55C /* BasePaginationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C189C29D5ECF200C5E55C /* BasePaginationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,6 @@
 		4B3C185629D4DD3D00C5E55C /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3C185929D4DD3D00C5E55C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B3C185A29D4DD3D00C5E55C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4B3C185C29D4DD3D00C5E55C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		4B3C185D29D4DD3D00C5E55C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4B3C185F29D4DD3D00C5E55C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4B3C186029D4DD3D00C5E55C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4B3C186329D4DD3D00C5E55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,13 @@
 		4B3C187B29D4DD3E00C5E55C /* StarWarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3C187F29D4DD3E00C5E55C /* StarWarsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarWarsUITests.m; sourceTree = "<group>"; };
 		4B3C188129D4DD3E00C5E55C /* StarWarsUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarWarsUITestsLaunchTests.m; sourceTree = "<group>"; };
+		4B3C189129D4E27D00C5E55C /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		4B3C189229D508C400C5E55C /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		4B3C189429D5094A00C5E55C /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		4B3C189729D518E300C5E55C /* ApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
+		4B3C189829D518EF00C5E55C /* ApiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		4B3C189B29D5ECE500C5E55C /* BasePaginationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePaginationModel.h; sourceTree = "<group>"; };
+		4B3C189C29D5ECF200C5E55C /* BasePaginationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePaginationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +112,12 @@
 		4B3C185829D4DD3D00C5E55C /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				4B3C189A29D5DFD800C5E55C /* Model */,
+				4B3C189629D518D300C5E55C /* HttpClient */,
+				4B3C189029D4E25300C5E55C /* CustomCells */,
+				4B3C188F29D4E1C900C5E55C /* Screens */,
 				4B3C185929D4DD3D00C5E55C /* AppDelegate.h */,
 				4B3C185A29D4DD3D00C5E55C /* AppDelegate.m */,
-				4B3C185C29D4DD3D00C5E55C /* SceneDelegate.h */,
-				4B3C185D29D4DD3D00C5E55C /* SceneDelegate.m */,
-				4B3C185F29D4DD3D00C5E55C /* ViewController.h */,
-				4B3C186029D4DD3D00C5E55C /* ViewController.m */,
 				4B3C186229D4DD3D00C5E55C /* Main.storyboard */,
 				4B3C186529D4DD3D00C5E55C /* Assets.xcassets */,
 				4B3C186729D4DD3D00C5E55C /* LaunchScreen.storyboard */,
@@ -134,6 +142,51 @@
 				4B3C188129D4DD3E00C5E55C /* StarWarsUITestsLaunchTests.m */,
 			);
 			path = StarWarsUITests;
+			sourceTree = "<group>";
+		};
+		4B3C188E29D4E1BE00C5E55C /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C185F29D4DD3D00C5E55C /* ViewController.h */,
+				4B3C186029D4DD3D00C5E55C /* ViewController.m */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		4B3C188F29D4E1C900C5E55C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C188E29D4E1BE00C5E55C /* CharactersList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4B3C189029D4E25300C5E55C /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C189129D4E27D00C5E55C /* CustomCell.h */,
+				4B3C189229D508C400C5E55C /* CustomCell.m */,
+				4B3C189429D5094A00C5E55C /* CustomCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		4B3C189629D518D300C5E55C /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C189729D518E300C5E55C /* ApiClient.h */,
+				4B3C189829D518EF00C5E55C /* ApiClient.m */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		4B3C189A29D5DFD800C5E55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B3C189B29D5ECE500C5E55C /* BasePaginationModel.h */,
+				4B3C189C29D5ECF200C5E55C /* BasePaginationModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +294,7 @@
 			files = (
 				4B3C186929D4DD3D00C5E55C /* LaunchScreen.storyboard in Resources */,
 				4B3C186629D4DD3D00C5E55C /* Assets.xcassets in Resources */,
+				4B3C189529D5094A00C5E55C /* CustomCell.xib in Resources */,
 				4B3C186429D4DD3D00C5E55C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +322,10 @@
 			files = (
 				4B3C186129D4DD3D00C5E55C /* ViewController.m in Sources */,
 				4B3C185B29D4DD3D00C5E55C /* AppDelegate.m in Sources */,
+				4B3C189329D508C400C5E55C /* CustomCell.m in Sources */,
+				4B3C189929D518EF00C5E55C /* ApiClient.m in Sources */,
+				4B3C189D29D5ECF200C5E55C /* BasePaginationModel.m in Sources */,
 				4B3C186C29D4DD3D00C5E55C /* main.m in Sources */,
-				4B3C185E29D4DD3D00C5E55C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
